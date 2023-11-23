@@ -24,3 +24,50 @@ It's a popular, component-based, declarative, state-driven, one-way data flow ja
 ### What is JSX ?
 
 JSX is a syntax extension for JavaScript that allows developers to write HTML-like code within JavaScript. JSX makes it easy to express the component hierarchy and provides a clear visualization of the UI structure.
+
+### Components :
+
+Components are the building blocks of React applications. They are self-contained pieces of code that can be reused and combined to create complex UIs. There are two types of components - Class-based and Functional Components.
+
+1. Class Components
+
+   ```
+   class MyComponent extends React.Component {
+      constructor() {
+        super();
+        this.state = {
+          key: "value"
+        };
+      };
+      render() {
+        return <div>...</div>;
+      }
+   }
+   ```
+
+2. Functional Components
+
+   ```
+   function MyComponent() {
+     const [myState, setMyState] = useState("");
+
+     useEffect(() => {
+       ...
+     }, []);
+
+     return <div>...</div>;
+   }
+   ```
+
+### State :
+
+The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.
+
+- A state can be modified based on user action or network changes
+- Every time the state of an object changes, React re-renders the component to the browser
+- The state object is initialized in the constructor
+- The state object can store multiple properties
+- this.setState() is used to change the value of the state object
+- setState() function performs a shallow merge between the new and the previous state
+
+### Props :
